@@ -53,3 +53,26 @@ for i in range(2**n, 2**(n + 1)):
 	# generate bitmask, from 0..00 to 1..11
 	bitmask = bin(i)[3:]
 ```
+
+#### 2020-08-05
+
+
+Started to work on array questions from [Array Questions](https://leetcode.com/explore/featured/card/fun-with-arrays/521/introduction/). But today is mainly spent on Trie questions. Definitely needs more practice on it since I never learnt it before.
+
+
+Some Takeaways:
+
+1. [any()](https://www.w3schools.com/python/ref_func_any.asp) function is quite useful. Along with [all()](https://www.w3schools.com/python/ref_func_all.asp). Learn to use them!
+
+2. For back trace in binary trees, we can:
+	- Use postorder traverse and pass along a parameter path with it. if `root == node or left or right`, we return True and append node to path. Have to DFS so order is reversed for path
+3. Trie structure basically has a children attribute which is a dict of same class (much like tree)
+4. Use `{}` is better than `dict()`, same with `[]`
+5. An is_end attribute can simply our code in trie
+6. `defaultdict` from `collections` allows dict to have default `None` keys and values so we don't need to check when adding. Use it when allows
+```python
+from collections import defaultdict
+    
+def _trie():
+    return defaultdict(_trie)
+```
