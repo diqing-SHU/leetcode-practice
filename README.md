@@ -54,6 +54,8 @@ for i in range(2**n, 2**(n + 1)):
 	bitmask = bin(i)[3:]
 ```
 
+---
+
 #### 2020-08-05
 
 
@@ -76,3 +78,20 @@ from collections import defaultdict
 def _trie():
     return defaultdict(_trie)
 ```
+
+---
+  
+
+#### 2020-08-06
+
+  
+
+About half way on array questions from [Array Questions](https://leetcode.com/explore/featured/card/fun-with-arrays/521/introduction/). Today's challenge is also an array question (442)
+
+
+Some Takeaways:
+
+1. 2 pointers is very useful in array
+2. Python `sort()`  uses a special version of merge sort, called Timsort, which runs in  **nlog2n**  time. So if we can have **O(n)** solution, don't use it.
+3. If an array hold unique values, we can use it as a hash map:
+	- For example:  [442. Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/discuss/775738/Python-2-solutions-with-O%28n%29-timeO%281%29-space-explained)
