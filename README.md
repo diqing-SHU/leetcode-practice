@@ -95,3 +95,36 @@ Some Takeaways:
 2. Python `sort()`  uses a special version of merge sort, called Timsort, which runs in  **nlog2n**  time. So if we can have **O(n)** solution, don't use it.
 3. If an array hold unique values, we can use it as a hash map:
 	- For example:  [442. Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/discuss/775738/Python-2-solutions-with-O%28n%29-timeO%281%29-space-explained)
+
+---
+  
+
+#### 2020-08-07
+
+  
+
+Three questions left from [Array Questions](https://leetcode.com/explore/featured/card/fun-with-arrays/521/introduction/). Today's challenge is a tree question (987). The concept is not hard. But the amount of code to construct is crazy. I am too tired to find out my solution missed on the sorting part. Will come back to it afterwards.
+
+
+Some Takeaways:
+
+1. Some useful code for sort dictionary with keys or value:
+```python
+# sort with key
+for key in sorted(mydict.keys()):
+    print("%s: %s" % (key, mydict[key]))
+# sort with value
+for key, value in sorted(mydict.items(), key=lambda item: item[1]):
+    print("%s: %s" % (key, value))
+```
+2. Move element by condition in array, we can do it one pass in-place:
+```python
+class Solution:
+    def sortArrayByParity(self, A: List[int]) -> List[int]:
+        j = 0
+        for i in range(len(A)):
+            if A[i]%2 == 0:
+                A[i], A[j] = A[j], A[i]
+                j+=1
+        return A
+```
