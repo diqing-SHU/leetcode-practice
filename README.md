@@ -128,3 +128,17 @@ class Solution:
                 j+=1
         return A
 ```
+
+---
+  
+
+#### 2020-08-11
+
+  
+
+I was quite busy the past two days. And was only able to keep up with daily challenges. Today I am back to routine with Linked List Questions
+
+
+Some Takeaways:
+
+1. We can use `float('-inf')` to populate the lowest value to simplify the code
