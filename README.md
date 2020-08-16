@@ -142,3 +142,30 @@ I was quite busy the past two days. And was only able to keep up with daily chal
 Some Takeaways:
 
 1. We can use `float('-inf')` to populate the lowest value to simplify the code
+
+---
+  
+
+#### 2020-08-15
+
+  
+
+I was quite busy recently. But everyday's challenge is still finished on time except one day the site is down...
+
+
+Some Takeaways:
+
+1. Some decent code to generate bit mask of certain amount of 1s.
+```python
+def gen_combinations(l, n):
+    end = int("1" * l, 2)
+    ans = []
+    for i in range(end + 1):
+        b = bin(i)[2:]
+        if b.count('1') == n:
+            ans.append(b.zfill(l))
+    return ans
+```
+2. Post-order is the reverse of Pre-order. Very useful for writing iterative solutions
+3. Greedy algorithm
+4. Dummy head for linked list questions to reduce code of checking odd cases (None)
