@@ -184,3 +184,13 @@ Some Takeaways:
 
 1. Sometimes, its easier to write iterative DFS/BFS solution for complicated Linked List questions. So, don't always rely on recursion.
 2. OneBuyOneSell and TwoBuyTwoSell are 3d DP questions. But with simplification, they can all be done with O(1) space. Don't forget to improve space usage with DP. (This two are more like greedy IMO, but DP gives a general solution for all these questions)
+
+
+---
+  
+
+#### 2020-08-27
+
+  
+
+1. Binary search on a sorted list we can use  [`bisect`](https://docs.python.org/3/library/bisect.html#module-bisect "bisect: Array bisection algorithms for binary searching.") module. But first remember how to do it.
