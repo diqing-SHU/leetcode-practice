@@ -9,3 +9,4 @@
 | 279| BFS, DP, Math| [Perfect Squares](https://leetcode.com/problems/perfect-squares/)| Medium|
 | 150| Stack| [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)| Medium|
 | 200| DFS, BFS| [Number of Islands](https://leetcode.com/problems/number-of-islands/)| Medium|
+| 394| Stack| [Decode String](https://leetcode.com/problems/decode-string/)| Medium|
