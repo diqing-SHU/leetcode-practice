@@ -11,3 +11,4 @@
 | 200| DFS, BFS| [Number of Islands](https://leetcode.com/problems/number-of-islands/)| Medium|
 | 394| Stack| [Decode String](https://leetcode.com/problems/decode-string/)| Medium|
 | 459| Pattern Searching, KMP| [Repeated Substring Pattern](https://leetcode.com/problems/repeated-substring-pattern/)| Easy|
+| 50| Math, Binary Search| [Pow(x, n)](https://leetcode.com/problems/powx-n/)| Medium|
