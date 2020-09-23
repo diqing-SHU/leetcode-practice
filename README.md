@@ -19,3 +19,28 @@ Been away for about 3 days. So today i'm focusing on the challenges of the past 
 
 1. We can use `enumerate()` to get both index and value at the same time:
 2. Python built in Tim Sort is smart enough, so if we provide 2 sorted list for it to merge. It can do it in O(n)!
+
+---
+
+#### 2020-09-14
+
+Back to the routine again. Finished 3 house robber questions.
+
+1. `tuple` is a constant array (immutable)
+
+
+---
+
+#### 2020-09-14
+
+Back to the routine again. Finished 3 house robber questions.
+
+1. `tuple` is a constant array (immutable)
+
+---
+
+#### 2020-09-22
+
+I did push as much recently. Time to get back to normal.
+
+1. `Boyer-Moore Voting Algorithm` is very useful for solving Major Elements questions

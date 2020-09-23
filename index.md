@@ -13,3 +13,4 @@
 | 459| Pattern Searching, KMP| [Repeated Substring Pattern](https://leetcode.com/problems/repeated-substring-pattern/)| Easy|
 | 50| Math, Binary Search| [Pow(x, n)](https://leetcode.com/problems/powx-n/)| Medium|
 | 95| DP, Recursion| [Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii/)| Medium|
+| 229| Array| [Majority Element II](https://leetcode.com/problems/majority-element-ii/)| Medium|
