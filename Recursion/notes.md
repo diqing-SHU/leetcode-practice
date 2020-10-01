@@ -105,5 +105,89 @@ First, we choose the middle point on the column which divides the matrix into tw
 
 We ignore the top left sub-matrix that ends with the element  {V_{i-1}}Vi−1​, because all the elements within this sub-matrix would be less than the target value. Similarly, we ignore the bottom right sub-matrices that starts with the element  {V_i}Vi​, because we know that all the elements within this sub-matrix would be greater than the target value.
 
+---
 
+## Backtracking Template
 
+----------
+
+In this article, we will present you a pseudocode template that summarizes some common patterns for the backtracking algorithms. Furthermore, we will demonstrate with some concrete examples on how to apply the template.
+
+### Template
+
+----------
+
+With the N-queen example as we presented in the previous article, one might have noticed some patterns about the backtracking algorithm. In the following, we present you a pseudocode template, which could help you to clarify the idea and structure the code when implementing the backtracking algorithms.
+```python
+def backtrack(candidate):
+    if find_solution(candidate):
+        output(candidate)
+        return
+    
+    # iterate all possible candidates.
+    for next_candidate in list_of_candidates:
+        if is_valid(next_candidate):
+            # try this partial candidate solution
+            place(next_candidate)
+            # given the candidate, explore further.
+            backtrack(next_candidate)
+            # backtrack
+            remove(next_candidate)
+```
+Here are a few notes about the above pseudocode.
+
+-   Overall, the enumeration of candidates is done in two levels: 1). at the first level, the function is implemented as recursion. At each occurrence of recursion, the function is one step further to the final solution. 2). as the second level, within the recursion, we have an iteration that allows us to explore all the candidates that are of the same progress to the final solution.
+  
+-   The backtracking should happen at the level of the iteration within the recursion.
+  
+-   Unlike brute-force search, in backtracking algorithms we are often able to determine if a partial solution candidate is worth exploring further (_i.e._ `is_valid(next_candidate)`), which allows us to prune the search zones. This is also known as the constraint,  _e.g._  the attacking zone of queen in N-queen game.
+  
+-   There are two symmetric functions that allow us to mark the decision (`place(candidate)`) and revert the decision (`remove(candidate)`).
+
+In the next sections, we show some concrete examples and explain how to apply the above pseudocode template.
+
+### Robot Room Cleaner
+
+----------
+
+> Given a room that is represented as a grid of cells, where each cell contains a value that indicates whether it is an obstacle or not, we are asked to clean the room with a robot cleaner which can turn in four directions and move one step at a time.
+
+This is a typical problem that can be solved with the backtracking paradigm, as many of you might have figured out from the description of the problem.
+
+Before diving into the algorithm, to facilitate the explanation, we plot a figure below with the grid of room and the movements of robot. As one can see, the robot is denoted as the  `red`  dot and each step that the robot takes is marked as a footprint.
+
+![](https://assets.leetcode.com/uploads/2019/04/06/robot_room_cleaner.png)
+
+_Fig 1. Robot Room Cleaner_
+
+We give the general idea below on how one can apply the above pseudocode template to implement a backtracking algorithm.
+
+- [1]. One can model each step of the robot as a recursive function (_i.e._  `backtrack()`).
+
+- [2]. At each step, technically the robot would have four candidates of direction to explore,  _e.g._  the robot located at the coordinate of  `(0, 0)`. Since not each direction is available though, one should check if the cell in the given direction is an obstacle or it has been cleaned before,  _i.e._  `is_valid(candidate)`. Another benefit of the check is that it would greatly reduce the number of possible paths that one needs to explore.
+
+- [3]. Once the robot decides to explore the cell in certain direction, the robot should mark its decision (_i.e._  `place(candidate)`). More importantly, later the robot should be able to revert the previous decision (_i.e._  `remove(candidate)`), by going back to the cell and restore its original direction.
+
+- [4]. The robot conducts the cleaning step by step, in the form of recursion of the  `backtrack()` function. The backtracking would be triggered whenever the robot reaches a point that it is surrounded either by the obstacles (_e.g._  cell at the row  `1`  and the column  `-3`) or the cleaned cells. At the end of the backtracking, the robot would get back to the its starting point, and each cell in the grid would be traversed at least once. As a result, the room is cleaned at the end.
+
+### Sudoku Solver
+
+----------
+
+> Sudoku is a popular game that many of you are familiar with. The main idea of the game is to fill a grid with only the numbers from 1 to 9, while ensuring that each row and each column as well as each sub-grid of 9 elements does not contain duplicate numbers.
+
+![](https://assets.leetcode.com/uploads/2019/03/31/sudoku_solver.png)
+
+_Fig 2. Sudoku Game_
+
+Once again, from the description of the Sudoku problem, one might have noticed the characteristics that hint on the solution of backtracking, such as the recursive nature of problem, a number of candidate solutions and some rules to filter out the candidates  _etc_.
+
+Indeed, we could solve the problem with the paradigm of backtracking. We break down on how to apply the backtracking template to implement a sudoku solver in the following.
+
+- [1]. Given a grid with some pre-filled numbers, the task is to fill the empty cells with the numbers that meet the constraint of Sudoku game. We could model the each step to fill an empty cell as a recursion function (_i.e._  our famous  `backtrack()`  function).
+
+- [2]. At each step, technically we have 9 candidates at hand to fill the empty cell. Yet, we could filter out the candidates by examining if they meet the rules of the Sudoku game, (_i.e._  `is_valid(candidate)`).
+
+- [3]. Then, among all the suitable candidates, we can try out one by one by filling the cell (i.e.  `place(candidate)`). Later we can revert our decision (_i.e._  `remove(candidate)`), so that we could try out the other candidates.
+
+- [4]. The solver would carry on one step after another, in the form of recursion by the  `backtrack`  function. The backtracking would be triggered at the points where either the solver cannot find any suitable candidate (as shown in the above figure), or the solver finds a solution to the problem. At the end of the backtracking, we would enumerate all the possible solutions to the Sudoku game.
