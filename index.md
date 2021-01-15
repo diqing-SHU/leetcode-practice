@@ -18,3 +18,4 @@
 | 51| Backtrack, Math| [N-Queens](https://leetcode.com/problems/n-queens/)| Hard|
 | 713| Array, Sliding Window| [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/)| Medium|
 | 310| Graph, Topological Sorting | [Minimum Height Trees](https://leetcode.com/problems/minimum-height-trees/)| Medium|
+| 1658| Sliding window, Cumulative Sums | [Minimum Operations to Reduce X to Zero](https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/)| Medium|
