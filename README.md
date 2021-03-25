@@ -21,3 +21,9 @@ Some commonly used built-in functions:
 `collections.Counter`: information is [here](https://pymotw.com/2/collections/counter.html)
 `itertools.permutations()`: information is [here](https://www.geeksforgeeks.org/python-itertools-permutations/)
 Remember as it can really help when dealing with questions
+
+---
+
+#### 2021-03-24
+
+Start to work on HackerRank questions
