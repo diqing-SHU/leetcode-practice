@@ -87,6 +87,93 @@ def swapNodes(indexes, queries):
 	return res
 
 ```
+
+My approach with recursion for in order traversal. notice that we need to increase recursion limits to pass large cases.
+
+```python
+#!/bin/python3
+
+import os
+import sys
+
+# recrsion limit needs to be increase
+# to pass last 2 cases
+sys.setrecursionlimit(15000)
+
+# define our tree structure
+class TreeNode:
+    def __init__(self, val):
+        super().__init__()
+        self.value = val
+        self.left = None
+        self.right = None
+
+#
+# Complete the swapNodes function below.
+#
+def swapNodes(indexes, queries):
+    # helper to get in order traversal
+    def getInorder(node):
+        if node:
+            return getInorder(node.left)+[node.value]+getInorder(node.right)
+        return []
+    # helper to swap nodes at certain level
+    def swapNode(node, currLevel, k):
+        if node:
+            if currLevel%k == 0:
+                # swap nodes here
+                node.left, node.right = node.right, node.left
+            # keep goind deep till we get to the leaves
+            swapNode(node.left, currLevel+1, k)
+            swapNode(node.right, currLevel+1, k)
+    res = []
+    print(indexes, queries)
+    # build our tree first, using bfs
+    root = TreeNode(1)
+    currLevel, nextLevel = [root], []
+    for (left, right) in indexes:
+        if not currLevel:
+            currLevel, nextLevel = nextLevel, []
+        curr = currLevel.pop(0)
+        if left != -1:
+            curr.left = TreeNode(left)
+            nextLevel.append(curr.left)
+        if right != -1:
+            curr.right = TreeNode(right)
+            nextLevel.append(curr.right)
+    # swap nodes on certain level
+    for query in queries:
+        # perform swap
+        swapNode(root, 1, query)
+        # add in-order travesal
+        res.append(getInorder(root))
+    return res
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input())
+
+    indexes = []
+
+    for _ in range(n):
+        indexes.append(list(map(int, input().rstrip().split())))
+
+    queries_count = int(input())
+
+    queries = []
+
+    for _ in range(queries_count):
+        queries_item = int(input())
+        queries.append(queries_item)
+
+    result = swapNodes(indexes, queries)
+
+    fptr.write('\n'.join([' '.join(map(str, x)) for x in result]))
+    fptr.write('\n')
+
+    fptr.close()
+```
 **Complexity Analysis**
 TC:O(h) build tree, travel, and swap all have the time complexity up to height of the tree.
 SC:O(n) need to build the tree for all elements.
