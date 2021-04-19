@@ -21,3 +21,4 @@
 | 1658| Sliding window, Cumulative Sums | [Minimum Operations to Reduce X to Zero](https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/)| Medium|
 | 23| DP | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)| Hard|
 | 17| Backtrack, DFS, BFS | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)| Medium|
+| 1074| Cumulative Sum, DP | [Number of Submatrices That Sum to Target](https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/)| Hard|

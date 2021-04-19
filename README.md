@@ -8,22 +8,11 @@ For now the questions will be sorted by difficulty under different folders
 
 ---
 
-#### 2021-03-20
+#### 2021-04-18
 
-Finished IELTS test. Time to get back to Leetcode
+Some useful Itertool functions:
 
----
+`itertools.accumulate()`: information is [here](https://docs.python.org/3/library/itertools.html#itertools.accumulate). It's accumulate sum and return that array of accumulated sum
 
-#### 2021-03-23
+`itertools.combinations`: information is [here](https://docs.python.org/3/library/itertools.html#itertools.combinations). It generates combinations of that size and return the array. Combinations are sorted from small to large
 
-Some commonly used built-in functions:
-`bin()`: information is [here](https://www.programiz.com/python-programming/methods/built-in/bin)
-`collections.Counter`: information is [here](https://pymotw.com/2/collections/counter.html)
-`itertools.permutations()`: information is [here](https://www.geeksforgeeks.org/python-itertools-permutations/)
-Remember as it can really help when dealing with questions
-
----
-
-#### 2021-03-24
-
-Start to work on HackerRank questions
