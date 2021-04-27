@@ -16,3 +16,11 @@ Some useful Itertool functions:
 
 `itertools.combinations`: information is [here](https://docs.python.org/3/library/itertools.html#itertools.combinations). It generates combinations of that size and return the array. Combinations are sorted from small to large
 
+---
+
+#### 2021-04-26
+
+Python heap queue (priority):
+
+`heapq`: information is [here](https://docs.python.org/3/library/heapq.html). This implementation uses arrays for which heap[k] <= heap[2*k+1] and heap[k] <= heap[2*k+2] for all k, counting elements from zero. For the sake of comparison, non-existing elements are considered to be infinite. The interesting property of a heap is that its smallest element is always the root, heap[0].
+
