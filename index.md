@@ -22,3 +22,4 @@
 | 23| DP | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)| Hard|
 | 17| Backtrack, DFS, BFS | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)| Medium|
 | 1074| Cumulative Sum, DP | [Number of Submatrices That Sum to Target](https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/)| Hard|
+| 63| DFS, DP | [Unique Paths II](https://leetcode.com/problems/unique-paths-ii/)| Medium|
