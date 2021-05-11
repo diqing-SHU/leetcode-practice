@@ -1,21 +1,23 @@
 # 1. Title
 
-## Question:
+## Question
 
+## Solution
 
+### Approach 1: Approach Name
 
-## Solution:
+#### Intuition
 
-**Approach 1:**
-
+#### Algorithm
 
 ```python
 
 
 
 ```
-**Complexity Analysis**
 
-TC:O(n)
+#### Complexity Analysis
 
-SC:O(n)
+- **Time Complexity:** O(n)
+
+- **Space Complexity:** O(n)

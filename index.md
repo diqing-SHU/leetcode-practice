@@ -1,4 +1,5 @@
 # Good Sample Questions
+
 | # | Type | Name| Difficulty
 |--|--|--| --|
 | 435 | Greedy, Interval | [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | Medium|
