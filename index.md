@@ -26,3 +26,4 @@
 | 63| DFS, DP | [Unique Paths II](https://leetcode.com/problems/unique-paths-ii/)| Medium|
 | 34| Binary Search, Merge Sort | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)| Medium|
 | 204| Prime Number, Sieve of Eratosthenes | [Count Primes](https://leetcode.com/problems/count-primes/)| Easy|
+| 318| Bitmask | [Maximum Product of Word Lengths](https://leetcode.com/problems/maximum-product-of-word-lengths/)| Medium|

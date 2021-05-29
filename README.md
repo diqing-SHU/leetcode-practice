@@ -15,3 +15,11 @@ A common algorithm to generate prime numbers: [Sieve of Eratosthenes](https://en
 The general idea is to mark all multiples of a non-prime in a dictionary until we reach `sqrt(n)`. Then unmarked numbers are the prime numbers.
 
 ---
+
+## 2021-05-28
+
+Bitmask is a good approach to do comparison based on bits. Main idea is use `&` on two binary numbers (can be representation of string), result of 0 indicates that there is no overlaps.
+
+More details on this [Sieve of Eratosthenes](https://dev.to/somedood/bitmasks-a-very-esoteric-and-impractical-way-of-managing-booleans-1hlf)
+
+---
