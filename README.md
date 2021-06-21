@@ -28,3 +28,9 @@ Questions from easy to hard often utilize this technique. Examples are:
 - `155. Min Stack`
 - `1696. Jump Game VI`
 - `239. Sliding Window Maximum`
+
+---
+
+## 2021-06-20
+
+Revisited a [DSU](https://en.wikipedia.org/wiki/Disjoint-set_data_structure#:~:text=In%20computer%20science,%20a%20disjoint,a%20set%20into%20disjoint%20subsets.) type of question. It is still a good solution to unify range question

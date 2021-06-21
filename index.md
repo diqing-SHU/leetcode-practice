@@ -28,3 +28,4 @@
 | 204| Prime Number, Sieve of Eratosthenes | [Count Primes](https://leetcode.com/problems/count-primes/)| Easy|
 | 318| Bitmask | [Maximum Product of Word Lengths](https://leetcode.com/problems/maximum-product-of-word-lengths/)| Medium|
 | 239| Decreasing Deque | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)| Hard|
+| 778| DSU, Binary Search, Heap | [Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/)| Hard|
