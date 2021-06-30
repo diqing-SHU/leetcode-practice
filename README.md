@@ -34,3 +34,13 @@ Questions from easy to hard often utilize this technique. Examples are:
 ## 2021-06-20
 
 Revisited a [DSU](https://en.wikipedia.org/wiki/Disjoint-set_data_structure#:~:text=In%20computer%20science,%20a%20disjoint,a%20set%20into%20disjoint%20subsets.) type of question. It is still a good solution to unify range question
+
+---
+
+## 2021-06-29
+
+Sliding window solutions are not hard to think about. But I always found myself having nested while loops with million edge case conditions.
+
+We shouldn't think too much. Most of the time, the end condition is when right/end reaches the end.
+
+We should also just move left or right once to avoid nested while loops. If conditions to move in a simple while loop to stop should be enough.
