@@ -31,3 +31,4 @@
 | 778| DSU, Binary Search, Heap | [Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/)| Hard|
 | 384| Fisher–Yates shuffle | [Shuffle an Array](https://leetcode.com/problems/shuffle-an-array/)| Medium|
 | 309| DP, Diff array | [Best Time to Buy and Sell Stock with Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)| Medium|
+| 496| Stack | [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/)| Easy|
